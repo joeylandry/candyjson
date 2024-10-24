@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Products JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .json-output {
+            white-space: pre-wrap;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Candy Products JSON</h1>
+
+    <div class="json-output" id="jsonData"></div>
+
+    <script>
+        // Global variable
+        const candyProducts = [
+            {
+                "name": "Chocolate Bar",
+                "description": "Rich and creamy milk chocolate bar",
+                "price": 2.5,
+                "categories": ["chocolate", "snack"]
+            },
+            {
+                "name": "Sour Gummies",
+                "description": "Fruit-flavored sour gummy candies",
+                "price": 3,
+                "categories": ["gummies", "snack"]
+            },
+            {
+                "name": "Peanut Butter Cups",
+                "description": "Chocolate cups filled with peanut butter",
+                "price": 4,
+                "categories": ["chocolate", "sweets"]
+            },
+            {
+                "name": "Cotton Candy",
+                "description": "Fluffy pink cotton candy",
+                "price": 5,
+                "categories": ["sweets", "snack"]
+            },
+            {
+                "name": "Caramel Chews",
+                "description": "Soft and chewy caramel bites",
+                "price": 3.5,
+                "categories": ["caramel", "snack"]
+            },
+            {
+                "name": "Licorice Twists",
+                "description": "Red licorice twists",
+                "price": 2.8,
+                "categories": ["gummies", "sweets"]
+            },
+            {
+                "name": "Mint Chocolate",
+                "description": "Dark chocolate with peppermint flavor",
+                "price": 4.5,
+                "categories": ["chocolate", "sweets"]
+            },
+            {
+                "name": "Lollipop",
+                "description": "Fruit-flavored lollipops",
+                "price": 1.2,
+                "categories": ["sweets", "snack"]
+            }
+        ];
+
+        // Convert to JSON string
+        const jsonString = JSON.stringify(candyProducts, null, 4);
+
+        // Display JSON string
+        document.getElementById('jsonData').textContent = jsonString;
+    </script>
+</body>
+</html>
